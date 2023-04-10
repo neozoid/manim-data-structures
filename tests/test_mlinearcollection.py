@@ -308,6 +308,12 @@ def test_copy(lc):
         assert lc_copy != lc
 
 
+@frames_comparison
+def test_add_to_scene(scene):
+    lc = LinearCollection([i + 1 for i in range(10)])
+    scene.play(Create(lc))
+
+
 if __name__ == "__main__":
     from manim import *
 
